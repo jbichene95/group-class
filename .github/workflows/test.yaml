@@ -1,0 +1,22 @@
+name: deploy static
+on:
+    push:
+        branches:
+            - master
+jobs:
+    build:
+        name: deploy tetris-calc
+        runs-on: ubuntu-latest
+        steps:
+        - name: publish files
+          uses: appleboy/ssh-action@v0.1.10
+          with:
+            host: ${{secrets.HOST}}
+            username: ${{secrets.USER_NAME}}
+            key: ${{secrets.SSH_KEY}}
+            script: pwd
+
+
+
+
+    
