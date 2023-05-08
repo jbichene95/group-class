@@ -17,6 +17,7 @@ jobs:
             script: |
                 sudo su
                 cd /var/www/html/group-class
+                git config --global --add safe.directory /var/www/html/group-class
                 
                 sudo git pull
                 sudo systemctl restart nginx
