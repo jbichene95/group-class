@@ -15,6 +15,7 @@ jobs:
             username: ${{secrets.USER_NAME}}
             key: ${{secrets.SSH_KEY}}
             script: |
+                sudo su
                 cd /var/www/html/group-class
                 
                 sudo git pull
