@@ -16,7 +16,8 @@ jobs:
             key: ${{secrets.SSH_KEY}}
             script: |
                 cd /var/www/html/group-class
-                git pull
+                
+                sudo git pull
                 sudo systemctl restart nginx
 
 
